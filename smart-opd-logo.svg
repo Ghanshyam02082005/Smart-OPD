@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#2563eb" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Icon Shield/Cross -->
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#logo-grad)" filter="url(#shadow)"/>
+    <!-- Medical Cross with Pulse -->
+    <path d="M24 14v20M14 24h20" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <!-- Pulse Line overlay -->
+    <path d="M12 24h6l3-6 4 12 4-8 3 2h6" stroke="#bfdbfe" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <!-- Text -->
+  <text x="64" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#0f172a" letter-spacing="-0.5">Smart<tspan fill="#2563eb">OPD</tspan></text>
+  <text x="65" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#64748b" letter-spacing="0.5">SMART TRIAGE QUEUE</text>
+</svg>

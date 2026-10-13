@@ -1,0 +1,12 @@
+{
+  "name": "smart-opd",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Smart OPD patient queue management system",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  }
+}
