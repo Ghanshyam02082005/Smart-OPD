@@ -1,0 +1,212 @@
+:root {
+  --mdmh-blue: #1b2f5d;
+  --mdmh-cyan: #36b7d8;
+  --mdmh-cyan-soft: #dff6ff;
+  --mdmh-light: #f8fbff;
+  --mdmh-border: #d8e3ef;
+  --mdmh-muted: #64748b;
+  --mdmh-footer: #dff7ff;
+  --mdmh-text: #0f172a;
+}
+
+.prescription-page {
+  min-height: 100vh;
+  padding: 24px 16px 36px;
+  background: #f5f7fa;
+}
+
+.prescription-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 20px;
+  max-width: 980px;
+}
+
+.prescription-paper {
+  width: min(100%, 1000px);
+  min-height: 1180px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid var(--mdmh-border);
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.prescription-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px 36px 18px;
+  background: #fff;
+}
+
+.prescription-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.prescription-hospital-logo {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.prescription-brand-text {
+  min-width: 0;
+}
+
+.prescription-brand-text h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.6vw, 3.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+  color: var(--mdmh-blue);
+  text-transform: uppercase;
+}
+
+.prescription-brand-text .subtitle {
+  margin-top: 8px;
+  font-size: clamp(0.72rem, 1vw, 1.06rem);
+  color: var(--mdmh-blue);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.prescription-contact {
+  text-align: right;
+  font-size: 0.96rem;
+  line-height: 1.56;
+  color: var(--mdmh-text);
+  flex-shrink: 0;
+}
+
+.prescription-contact strong {
+  color: var(--mdmh-blue);
+}
+
+.prescription-divider {
+  height: 6px;
+  background: linear-gradient(90deg, #2db8da 0%, #6ecae7 100%);
+  width: 100%;
+}
+
+.prescription-main {
+  background: #ffffff;
+  padding: 18px 36px 0;
+}
+
+.prescription-patient-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px 20px;
+  font-size: 0.95rem;
+  color: var(--mdmh-text);
+  margin-bottom: 18px;
+}
+
+.prescription-field {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 28px;
+  gap: 6px;
+  border-bottom: 1px solid rgba(70, 98, 135, 0.2);
+  padding-bottom: 4px;
+}
+
+.prescription-field.small {
+  max-width: 240px;
+}
+
+.prescription-label {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--mdmh-blue);
+}
+
+.prescription-value {
+  font-weight: 700;
+  color: var(--mdmh-text);
+  word-break: break-word;
+}
+
+.prescription-blank {
+  min-height: 600px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(180deg, rgba(250, 252, 255, 0.75), rgba(255,255,255,0.35));
+  padding: 16px 18px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.prescription-blank::before {
+  content: "Clinical Notes / Prescription";
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--mdmh-blue);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.prescription-lines {
+  position: absolute;
+  inset: 52px 18px 18px;
+  background-image: linear-gradient(to bottom, rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+  background-size: 100% 28px;
+  border-radius: 6px;
+}
+
+.prescription-signoff {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 0 8px;
+  font-size: 0.8rem;
+  color: var(--mdmh-muted);
+}
+
+.prescription-signoff .signature-box {
+  flex: 1;
+  border-top: 1px solid rgba(31, 41, 55, 0.6);
+  padding-top: 8px;
+  text-align: center;
+}
+
+.prescription-footer {
+  background: var(--mdmh-footer);
+  color: var(--mdmh-blue);
+  border-top: 1px solid rgba(35, 145, 180, 0.4);
+  padding: 14px 18px 16px;
+  text-align: center;
+  font-size: 0.84rem;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .prescription-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .prescription-contact {
+    text-align: left;
+  }
+
+  .prescription-patient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prescription-paper {
+    min-height: auto;
+  }
+}

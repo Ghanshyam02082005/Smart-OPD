@@ -1,0 +1,249 @@
+/* ==========================================================================
+   SMART OPD - FORMS & REGISTRATION STYLES
+   ========================================================================== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
+}
+
+.form-control.is-invalid {
+  border-color: var(--priority-immediate);
+  background-color: #fff5f5;
+}
+
+.complaint-entry-row {
+  display: flex;
+  gap: 8px;
+}
+
+.complaint-entry-row .form-control {
+  min-width: 0;
+}
+
+.complaint-mic-button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.complaint-mic-button[aria-pressed="true"] {
+  border-color: var(--priority-immediate);
+  color: var(--priority-immediate-text);
+}
+
+.complaint-mic-status {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.invalid-feedback {
+  font-size: 12px;
+  color: var(--priority-immediate-text);
+  margin-top: 4px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 520px) {
+  .complaint-entry-row {
+    flex-direction: column;
+  }
+
+  .complaint-mic-button {
+    align-self: flex-start;
+  }
+}
+
+/* SYMPTOM SELECTION CHIPS GRID */
+.symptom-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.symptom-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition-fast);
+}
+
+.symptom-chip:hover {
+  background-color: var(--bg-muted);
+  border-color: var(--primary-500);
+}
+
+.symptom-chip input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-600);
+  cursor: pointer;
+}
+
+.symptom-chip.selected {
+  border-color: var(--primary-600);
+  background-color: var(--primary-50);
+  color: var(--primary-900);
+  font-weight: 600;
+}
+
+.symptom-chip.is-redflag {
+  border-color: var(--priority-immediate-border);
+}
+.symptom-chip.is-redflag.selected {
+  background-color: var(--priority-immediate-bg);
+  color: var(--priority-immediate-text);
+}
+
+/* VITALS INPUT SECTION */
+.vitals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  background-color: var(--bg-muted);
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.vital-card {
+  background-color: var(--bg-surface);
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.vital-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.vital-title {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.vital-unavail-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+/* LIVE TRIAGE PREVIEW BOX */
+.triage-preview-card {
+  background-color: var(--primary-50);
+  border: 1.5px solid var(--primary-200);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.ai-intake-panel {
+  padding: 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-muted);
+}
+
+.ai-intake-panel > p:first-child,
+.ai-summary-status {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.ai-summary-status:empty {
+  display: none;
+}
+
+.ai-summary-confirm {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.ai-summary-confirm input {
+  margin-top: 3px;
+}
+
+.doctor-ai-summary {
+  margin-top: 12px;
+  padding: 12px;
+  border-left: 3px solid var(--primary-600);
+  border-radius: var(--radius-sm);
+  background: var(--bg-muted);
+}
+
+.doctor-ai-summary strong {
+  font-size: 12px;
+}
+
+.doctor-ai-summary p {
+  margin: 6px 0 0;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.triage-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.missing-vitals-warning {
+  background-color: #fffbeeb0;
+  border: 1px dashed #f59e0b;
+  color: #b45309;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
